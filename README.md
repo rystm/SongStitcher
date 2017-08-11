@@ -74,4 +74,5 @@ The ideal songs have: a continuous, driving beat; few breaks in the beat for ver
 tempos within ~30bpm of each other.
 
 Devs: Ryan Miller and Kaitlyn MacIntyre
+
 See more at songstitcher.weebly.com
