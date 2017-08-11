@@ -1,6 +1,6 @@
 # SongStitcher
 ## What It Is
-<br>
+
 SongStitcher makes seamless transitions between songs a reality. 
 It takes in two songs, shifts the tempo of one or both songs, 
 and overlaps the songs by a specified number of beats, on the beat. 
@@ -8,33 +8,33 @@ It also gives the option to cross-fade the songs.
 The goal is to have no interruption in tempo, so that dancers can stay in their groove. 
 The way to do that is to line up beats in the first song with beats in the second song, 
 after they have been shifted to have matching tempos at the end of the first song and beginning of the next.
-<br>
-<br>
+
+
 ## How It Works
-<br>
+
 SongStitcher is based on several pre-existing features in audio manipulation, 
 namely beat tracking and phase vocoding, or changing the tempo of a song without changing pitch. 
 The program takes in two songs, then beat tracks both to find the tempos. 
 Based on the user's selection, one tempo is picked as the unifying tempo (or the two are averaged), 
 and the song(s) that need(s) to be sped up or slowed down are run through the phase vocoder.
-<br>
+
 Now there are two audio files at the same tempo. 
 They are both run through a beat tracker again to find the sample indices of each beat. 
 Then the second song is added to the first song, 
 with the fourth beat of song two matched up with the fourth beat in the overlap window for the first song. 
 The fourth beat is used so that any fuzziness at the beginning of the beat tracking is ignored, 
 and the rest of the transition is on beat.
-<br>
+
 This project uses Librosa, a Python library for music and audio processing, 
 for its beat tracker and tempo detector. 
 The Python/C library Aubio was also used for its phase vocoder, 
 and the body of the code is based on their timestretch demo found at 
 https://dev.aubio.org/browser/python/demos/demo_timestretch.py?rev=dd18484ebbd743e05cd1ddf0f3d71c722fff0109. 
 It uses numpy for storing audio, and either Librosa or Aubio to read and write the songs that are being edited.
-<br>
-<br>
+
+
 ## Testing/Results
-<br>
+
 Originally, we had decided to partially time-shift songs as they progressed, 
 so that they slowly and smoothly sped up or slowed down until they reached the target transition tempo. 
 During testing, we found that this caused a number of rather difficult issues. 
@@ -46,7 +46,7 @@ and successfully beat-track a partially time-shifted audio file,
 at least enough that we could reliably overlap two tracks that were partially time-shifted to the same tempo. 
 Instead, we lowered our expectations, and time-shifted entire tracks. 
 Instead of a song's tempo changing as it progressed, now the song plays at its adjusted tempo the whole time.
-<br>
+
 We tested SongStitcher with songs from two general genres: EDM and pop. 
 We looked for songs that generally had a relatively driving beat, though not necessarily the whole time. 
 Our songs were all in the general range of 120bpm to 150bpm. This specific range is not important, 
