@@ -72,3 +72,6 @@ However, it is this narrow range (EDM, House, etc) that SongStitcher would be ma
 When used on music from those genres, many transitions sounded qualitatively very successful. 
 The ideal songs have: a continuous, driving beat; few breaks in the beat for verses; 
 tempos within ~30bpm of each other.
+
+Devs: Ryan Miller and Kaitlyn MacIntyre
+See more at songstitcher.weebly.com
