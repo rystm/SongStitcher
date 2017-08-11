@@ -32,6 +32,18 @@ and the body of the code is based on their timestretch demo found at
 https://dev.aubio.org/browser/python/demos/demo_timestretch.py?rev=dd18484ebbd743e05cd1ddf0f3d71c722fff0109. 
 It uses numpy for storing audio, and either Librosa or Aubio to read and write the songs that are being edited.
 
+## Sample Usage
+
+After downloading the files and opening a terminal in the correct folder,
+run this (you will need numpy, librosa, and aubio installed):
+
+python songstitcher.py Boundless_170.wav Bounce_150 -b 75 -f 1 -t 1 -o BoundlessBounceMix_170.wav
+
+This command takes the two songs, overlaps them by 75 beats, cross-fades the volume,
+and makes the overall tempo match that of the first song.
+The output file, BoundlessBounceMix_170.wav, is saved in the working directory.
+
+This command run as-is will put the transition somewhere around 2:35
 
 ## Testing/Results
 
