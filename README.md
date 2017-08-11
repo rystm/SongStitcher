@@ -1,6 +1,5 @@
 # SongStitcher
-<h1>
-What It Is
+## What It Is
 <br>
 SongStitcher makes seamless transitions between songs a reality. 
 It takes in two songs, shifts the tempo of one or both songs, 
